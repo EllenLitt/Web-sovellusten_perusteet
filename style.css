@@ -17,6 +17,15 @@ nav {
     color: black;
 }
 
+nav img.logoylos {
+    width: 100px;
+    height: auto;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    float: left;
+}
+
 header {
     width: 100%;
     text-align: center;
@@ -126,11 +135,13 @@ footer img.logo {
 
 footer img.linkedin {
     width: 35px;
+    margin-left: 20 px;
     height: auto;
 }
 
 footer img.fb {
     width: 35px;
+    margin-right: 20;
     height: auto;
 }
 
