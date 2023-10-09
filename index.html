@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>KnitStudio</title>
+	<link rel="stylesheet" href="style.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&display=swap" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/canvg/1.5/canvg.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="index.html">Generator</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+
+		<h1><img src="assets/images/knitsstudio_musta.svg"></h1>
+	</header>
+
+	<main class="content">
+		<div class="container">
+			<div class="column1">
+				<label for="taustavari">Background color:</label>
+				<input type="color" id="taustavari" name="colorPicker" value="#ffffff">
+				</br></br>
+				<label for="silmukkavari">Loop color:</label>
+				<input type="color" id="silmukkavari" name="colorPicker" value="#ffffff">
+
+				</br></br>
+				<label for="rivi">Rows: </label>
+				<input type="number" id="rivi" name="rivi" min="1" max="25" onchange="triggeri()">
+				</br></br>
+				<label for="sarake">Columns: </label>
+				<input type="number" id="sarake" name="sarake" min="1" max="25" onchange="triggeri()">
+			</div>
+
+			<div class="column2">
+				<svg id="svg_kuva" style="border:1px"></svg>
+			</div>
+		</div>
+		</br></br>
+		<div id="kopioastia"></div>
+
+		<button id="downloadBtn">Lataa PDF</button>
+	</main>
+
+	<footer>
+		<img class="logo" src="assets/images/knitsstudio_valkoinen.svg" alt="img1">
+		<br>
+		<br>
+		<img class="linkedin" src="assets/images/linkedin-in.svg" alt="img4">
+		<img class="fb" src="assets/images/facebook-f.svg" alt="img2">
+		<img class="ig" src="assets/images/instagram.svg" alt="img3">
+	</footer>
+
+	<script src="assets/scripts/script.js"></script>
+</body>
+
+</html>
