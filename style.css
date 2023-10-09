@@ -29,6 +29,12 @@ nav ul li {
     margin: 0 20px;
 }
 
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
 nav img.logoylos {
     width: 100px;
     height: auto;
@@ -37,22 +43,7 @@ nav img.logoylos {
     margin-bottom: 20px;
     float: left;
 }
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-}
 
-nav ul li {
-    display: inline;
-    margin: 0 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-}
 header {
     width: 100%;
     text-align: center;
@@ -78,7 +69,18 @@ h1 {
     text-align: right;
     padding: 100px;
 }
+.column {
+    width: 25%;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px;
+}
 
+.icon {
+    width: 40px;
+    height: 40px;
+}
 .container {
     display: flex;
     width: 100%;
