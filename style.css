@@ -15,6 +15,18 @@ nav {
     font-size: 18px;
     background-color: white;
     color: black;
+    float: right;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
 }
 
 nav img.logoylos {
@@ -25,10 +37,28 @@ nav img.logoylos {
     margin-bottom: 20px;
     float: left;
 }
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
 
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
 header {
     width: 100%;
     text-align: center;
+    background-image: url(assets/images/knitstudio.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 main {
@@ -36,22 +66,6 @@ main {
     padding: 20px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-}
-
-li {
-    display: inline;
-    margin: 0 20px;
-}
-
-a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-}
 
 .image1 {
     width: 100%;
@@ -60,18 +74,8 @@ a {
     background-position: center;
 }
 
-img {
-    width: 40%;
-    height: auto;
-    background-size: cover;
-    background-position: center;
-}
-
 h1 {
-    text-align: center;
-    background-image: url(assets/images/knitstudio.jpg);
-    background-size: cover;
-    background-position: center;
+    text-align: right;
     padding: 100px;
 }
 
