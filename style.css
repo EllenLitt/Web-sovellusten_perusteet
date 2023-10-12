@@ -190,19 +190,20 @@ footer img.ig {
         width: 120px
     }
     h1 {
-      font-size:1.4em;
+      font-size:1.05em;
     }
     h2{
-        font-size: 1.2em;
+        font-size: 1em;
     }
     .column{
-        font-size: 1em;
+        font-size: 0.8em;
+        max-width: 100%;
     }
     .icon{
         width: 30px;
         height: 30px;
     }
-    .content{
-        font-size: 1em;
+    .column1{
+        font-size: 0.8em;
     }
   }
