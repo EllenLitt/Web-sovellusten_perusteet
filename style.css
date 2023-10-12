@@ -188,6 +188,12 @@ footer img.ig {
 }
 
 @media only screen and (max-width: 750px) {
+    nav{
+        font-size: 0.8em;
+    }
+    body img.logoylos {
+        width: 120px
+    }
     h1 {
       font-size:1.2em;
     }
