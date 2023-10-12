@@ -136,9 +136,16 @@ h2 {
     border: 3px solid rgb(60, 60, 59);;
 }
 
+.kopioastia img {
+    stroke: white;
+    stroke-width: 0.2;
+    stroke-opacity: 0.2;
+}
+
 svg {
-    margin: 0;
-    padding: 1px;
+    stroke: white;
+    stroke-width: 0.3;
+    stroke-opacity: 0.3;
 }
 
 button {
@@ -181,8 +188,17 @@ footer img.ig {
 }
 
 @media only screen and (max-width: 750px) {
-    H1 {
-      font-size:1em;
+    h1 {
+      font-size:1.2em;
     }
-    
+    h2{
+        font-size: 1em;
+    }
+    .column{
+        font-size: 0.8em;
+    }
+    .icon{
+        width: 30px;
+        height: 30px;
+    }
   }
