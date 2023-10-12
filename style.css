@@ -112,6 +112,7 @@ h2 {
 .content {
     padding: 3%;
     font-family: 'Lato', sans-serif;
+    font-weight: bold;
     font-size: 18px;
     line-height: 1.5;
 }
@@ -134,12 +135,6 @@ h2 {
     display: flex;
     transform: scale(0.5);
     border: 3px solid rgb(60, 60, 59);;
-}
-
-.kopioastia img {
-    stroke: white;
-    stroke-width: 0.2;
-    stroke-opacity: 0.2;
 }
 
 svg {
@@ -189,25 +184,25 @@ footer img.ig {
 
 @media only screen and (max-width: 750px) {
     nav{
-        font-size: 0.8em;
+        font-size: 1em;
     }
     body img.logoylos {
         width: 120px
     }
     h1 {
-      font-size:1.2em;
+      font-size:1.4em;
     }
     h2{
-        font-size: 1em;
+        font-size: 1.2em;
     }
     .column{
-        font-size: 0.8em;
+        font-size: 1em;
     }
     .icon{
         width: 30px;
         height: 30px;
     }
     .content{
-        font-size: 0.8em;
+        font-size: 1em;
     }
   }
