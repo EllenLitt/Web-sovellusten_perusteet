@@ -61,7 +61,14 @@ body img.logoylos {
     margin-top: 30px;
     float: left;
 }
-
+.container1{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+}
 main {
     flex: 1;
     padding: 20px;
@@ -103,9 +110,7 @@ h2 {
     height: 50px;
 }
 
-.container {
-    position: relative;
-    text-align: center;
+.container2 {
     color: rgb(0, 0, 0);
   }
 
@@ -183,12 +188,13 @@ footer img.ig {
 }
 
 @media only screen and (max-width: 750px) {
+    body .img{
+        width: auto;
+    }
     nav{
         font-size: 1em;
     }
-    body img.logoylos {
-        width: 120px
-    }
+    
     h1 {
       font-size:1.05em;
     }
@@ -198,6 +204,7 @@ footer img.ig {
     .column{
         font-size: 0.8em;
         width: 100%;
+        padding: 0;
     }
     .icon{
         width: 30px;
