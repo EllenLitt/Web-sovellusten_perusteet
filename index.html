@@ -16,53 +16,68 @@
 
 <body>
 	<header>
+		<a href="index.html">
+            <img class="logoylos" src="assets/images/knitsstudio_musta.svg" alt="logoylos">
+        </a>
+
 		<nav>
 			<ul>
-				<li><img class="logoylos" src="assets/images/knitsstudio_musta.svg"></li>
 				<li><a href="contact.html">Contact</a></li>
 			</ul>
 		</nav>
-
-		<h1>Design your own knitting pattern</h1>
 	</header>
 
+	<div class="container">
+		<img src="assets/images/knitstudio.jpg" alt="Snow" style="width:100%;">
+		<h1>Design your own knitting pattern</h1>
+	</div>
 	<main class="content">
+
 		<div class="home">
 			<h2>How it works?</h2>
 			<div class="row">
 				<div class="column">
 					<img class="icon" src="assets/images/yksi.svg" alt="Kuva 1">
-					<p>Pieni teksti 1</p>
+					<p>jotain</p>
 				</div>
 			
 				<div class="column">
 					<img class="icon" src="assets/images/kaksi.svg" alt="Kuva 2">
-					<p>Pieni teksti 2</p>
+					<p>jotain</p>
 				</div>
 			
 				<div class="column">
 					<img class="icon" src="assets/images/kolme.svg" alt="Kuva 3">
-					<p>Pieni teksti 3</p>
+					<p>jotain</p>
 				</div>
 			
 				<div class="column">
 					<img class="icon" src="assets/images/neljä.svg" alt="Kuva 4">
-					<p>Pieni teksti 4</p>
+					<p>Jotain</p>
 				</div>
+
+				<div class="column">
+					<img class="icon" src="assets/images/viisi.svg" alt="Kuva 5">
+					<p>Jotain</p>
+				</div>
+
 			  </div>
 		</div>
+
 		<div class="container">
 			<div class="column1">
 				<label for="taustavari">Background color:</label>
 				<input type="color" id="taustavari" name="colorPicker" value="#ffffff">
 				</br></br>
+
 				<label for="silmukkavari">Loop color:</label>
 				<input type="color" id="silmukkavari" name="colorPicker" value="#ffffff">
-
 				</br></br>
+
 				<label for="rivi">Rows: </label>
 				<input type="number" id="rivi" name="rivi" min="1" max="25" onchange="triggeri()">
 				</br></br>
+
 				<label for="sarake">Columns: </label>
 				<input type="number" id="sarake" name="sarake" min="1" max="25" onchange="triggeri()">
 			</div>
@@ -70,12 +85,15 @@
 			<div class="column2">
 				<svg id="svg_kuva" style="border:1px"></svg>
 			</div>
+
 		</div>
+
 		</br></br>
 
 		<div id="kopioastia"></div>
 
 		<button id="downloadButton">Download SVG</button>
+
 	</main>
 
     <footer>
@@ -85,15 +103,18 @@
         <a href="https://www.linkedin.com/">
             <img class="linkedin" src="assets/images/linkedin-in.svg" alt="img4">
         </a>
+
         <a href="https://www.facebook.com/">
             <img class="fb" src="assets/images/facebook-f.svg" alt="img2">
         </a>
+
         <a href="https://www.instagram.com/">
             <img class="ig" src="assets/images/instagram.svg" alt="img3">
         </a>
     </footer>
 
 	<script src="assets/scripts/script.js"></script>
+
 </body>
 
 </html>
