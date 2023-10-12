@@ -110,6 +110,18 @@ h2 {
     height: 50px;
 }
 
+button {
+    background-color: #ffffff;
+    color: black;
+    border: 3px solid rgb(177, 177, 177);
+    padding: 4px 10px;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    cursor: pointer;
+    margin-bottom: 1%;
+    float: right;
+}
+
 .container2 {
     color: rgb(0, 0, 0);
   }
@@ -146,16 +158,6 @@ svg {
     stroke: white;
     stroke-width: 0.4;
     stroke-opacity: 0.4;
-}
-
-button {
-    background-color: #ffffff;
-    color: black;
-    border: 3px solid rgb(177, 177, 177);
-    padding: 4px 10px;
-    font-size: 16px;
-    font-family: 'Lato', sans-serif;
-    cursor: pointer;
 }
 
 footer {
