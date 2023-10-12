@@ -190,7 +190,7 @@ footer img.ig {
 }
 
 @media only screen and (max-width: 750px) {
-    body .img{
+    .container{
         width: auto;
     }
     nav{
