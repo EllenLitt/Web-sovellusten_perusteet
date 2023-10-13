@@ -157,7 +157,29 @@ footer {
     text-align: start;
     padding: 60px;
 }
+footer img.logo { 
+    width: 200px; 
+    height: auto; 
+    color: rgb(60, 60, 59); 
+} 
 
+footer img.linkedin { 
+    width: 40px; 
+    height: auto; 
+    color: rgb(60, 60, 59); 
+}
+
+footer img.fb { 
+    width: 40px; 
+    height: auto; 
+    color: rgb(60, 60, 59); 
+}
+
+footer img.ig { 
+    width: 40px; 
+    height: auto; 
+    color: rgb(60, 60, 59); 
+}
 .social-icons {
     display: flex;
 }
