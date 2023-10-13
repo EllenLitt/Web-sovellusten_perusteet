@@ -26,9 +26,9 @@ function generoiSVG() {
             rect.setAttribute('width', SIVUMITTA);
             rect.setAttribute('height', SIVUMITTA);
             rect.setAttribute('fill', taustaVari);
-            /*rect.setAttribute('stroke', 'black');
+            rect.setAttribute('stroke', 'black');
             rect.setAttribute('stroke-width', '0.2');
-            rect.setAttribute('stroke-opacity', '0.2');*/
+            rect.setAttribute('stroke-opacity', '0.2');
             rect.addEventListener('mousedown', ruutuaKlikattu);
             rect.addEventListener('contextmenu', function (event) {
                 event.preventDefault();
