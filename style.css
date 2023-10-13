@@ -194,7 +194,7 @@ footer img.ig {
     color: rgb(60, 60, 59);
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
     body img.logoylos{
         width: 130px;
         height: auto;
