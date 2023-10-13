@@ -82,6 +82,7 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #616651;
+    text-align: end;
   }
 
 h2 {
@@ -193,17 +194,17 @@ footer img.ig {
     color: rgb(60, 60, 59);
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 800px) {
     body img.logoylos{
         width: 130px;
         height: auto;
     }
     nav{
-        font-size: 1em;
+        font-size: 0.9em;
     }
     
     h1 {
-      font-size:1.05em;
+      font-size:1.1em;
     }
     h2{
         font-size: 0.95em;
