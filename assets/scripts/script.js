@@ -60,12 +60,12 @@ function instantiateSVGs() {
     for (let i = 0; i < 3; i++) {
         const clonedSVG = document.getElementById('svg_kuva').cloneNode(true);
         const rects = clonedSVG.querySelectorAll('rect');
-        rects.forEach(rect => { // poistetaan ruudukko taustalta
+        /*rects.forEach(rect => { // poistetaan ruudukko taustalta
             rect.removeAttribute('stroke');
             rect.removeAttribute('stroke-width');
             rect.setAttribute('stroke-width', '0.0');
             rect.setAttribute('stroke-opacity', '0.0');
-        });
+        });*/
         container.appendChild(clonedSVG);
     }
 }
