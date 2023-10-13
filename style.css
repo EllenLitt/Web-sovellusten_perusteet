@@ -158,28 +158,12 @@ footer {
     padding: 60px;
 }
 
-footer img.logo {
-    width: 200px;
-    height: auto;
-    color: rgb(60, 60, 59);
+.social-icons {
+    display: flex;
 }
 
-footer img.linkedin {
-    width: 35px;
-    height: auto;
-    color: rgb(60, 60, 59);
-}
-
-footer img.fb {
-    width: 35px;
-    height: auto;
-    color: rgb(60, 60, 59);
-}
-
-footer img.ig {
-    width: 35px;
-    height: auto;
-    color: rgb(60, 60, 59);
+.social-icons div {
+    margin-right: 10px; 
 }
 
 @media only screen and (max-width: 850px) {
