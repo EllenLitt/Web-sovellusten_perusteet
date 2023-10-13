@@ -88,15 +88,15 @@ function downloadSVG(svgElementId, filename) {
     // Lisätään namespace attribuutteja to the SVG elementtiin, 
     // jotta browserit pystyy näyttämään svg tiedoston suoraan latauksen jälkeen
     svgElement.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-    svgElement.setAttribute("xmlns:xlink", "http://www.w3.org/1999/xlink");				
+    svgElement.setAttribute("xmlns:xlink", "http://www.w3.org/1999/xlink");
     var svgContent = svgElement.outerHTML;
     // Lisätään SVG tiedoston standarditiedot svg kuvan alkuun
     var svgHeader = '<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n' +
-                    '<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" \n' +
-                    '  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">\n';
+        '<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" \n' +
+        '  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">\n';
     var koko_svg = svgHeader + svgContent;
-    
-    var blob = new Blob([koko_svg], {type: "image/svg+xml;charset=utf-8"});
+
+    var blob = new Blob([koko_svg], { type: "image/svg+xml;charset=utf-8" });
     var url = URL.createObjectURL(blob);
 
     var downloadLink = document.createElement("a");
@@ -110,7 +110,7 @@ function downloadSVG(svgElementId, filename) {
     URL.revokeObjectURL(url);
 }
 
-document.getElementById('downloadButton').addEventListener('click', function() {
+document.getElementById('downloadButton').addEventListener('click', function () {
     downloadSVG("svg_kuva", "neule.svg");
 });
 
