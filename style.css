@@ -157,35 +157,37 @@ footer {
     text-align: start;
     padding: 60px;
 }
-footer img.logo { 
-    width: 200px; 
-    height: auto; 
-    color: rgb(60, 60, 59); 
-} 
 
-footer img.linkedin { 
-    width: 40px; 
-    height: auto; 
-    color: rgb(60, 60, 59); 
+footer img.logo {
+    width: 200px;
+    height: auto;
+    color: rgb(60, 60, 59);
 }
 
-footer img.fb { 
-    width: 40px; 
-    height: auto; 
-    color: rgb(60, 60, 59); 
+footer img.linkedin {
+    width: 40px;
+    height: auto;
+    color: rgb(60, 60, 59);
 }
 
-footer img.ig { 
-    width: 40px; 
-    height: auto; 
-    color: rgb(60, 60, 59); 
+footer img.fb {
+    width: 40px;
+    height: auto;
+    color: rgb(60, 60, 59);
 }
+
+footer img.ig {
+    width: 40px;
+    height: auto;
+    color: rgb(60, 60, 59);
+}
+
 .social-icons {
     display: flex;
 }
 
 .social-icons div {
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 @media only screen and (max-width: 850px) {
@@ -220,9 +222,11 @@ footer img.ig {
     .column1 {
         font-size: 0.8em;
     }
+
     #kopioastia svg {
         display: none;
     }
+
     .contact {
         font-size: 0.8em;
     }
