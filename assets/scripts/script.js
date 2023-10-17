@@ -122,16 +122,23 @@ document.getElementById('downloadButton').addEventListener('click', function () 
     downloadSVG("svg_kuva", "neule.svg");
 });
 
-
+//feedback form
 document.getElementById('feedbackForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    // Otetaan palauteteksti lomakkeesta
+    // Get feedback text from the form
     const feedbackText = document.getElementById('feedback').value;
 
-    // Näytetään kiitosviesti
+    // Display a thank you message
     const messageDiv = document.getElementById('message');
-    messageDiv.textContent = 'Kiitos palautteesta: ' + feedbackText;
+    messageDiv.textContent = 'Thank you for your feedback: ' + feedbackText;
+
+    // Set a timeout to hide the message after 5 seconds (5000 milliseconds)
+    setTimeout(function() {
+        messageDiv.textContent = ''; // Empty the message after 5 seconds
+    }, 5000);
+
+    // Clear the form
+    document.getElementById('feedbackForm').reset();
     
-    // Voit lähettää tämän tiedon palvelimelle tässä vaiheessa AJAX:in avulla, jos haluat tallentaa palautteen.
 });
