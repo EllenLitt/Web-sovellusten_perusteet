@@ -1,13 +1,13 @@
 function triggeri() {
-    generoiSVG();
+    generoiSVG();                    //kutsutaan generoiSVG() -funktiota
 }
 
 function generoiSVG() {
     const SIVUMITTA = 20; // ruudun sivumitta pikseleina
-    const sarakkeet_lkm = document.getElementById('sarake').value;
-    const rivit_lkm = document.getElementById('rivi').value;
-    const svg_kuva = document.getElementById('svg_kuva');
-    const taustaVari = document.getElementById('taustavari').value;
+    const sarakkeet_lkm = document.getElementById('sarake').value; //käyttäjän syöttämä sarakkeiden määrä
+    const rivit_lkm = document.getElementById('rivi').value; //käyttäjän syöttämä rivien määrä
+    const svg_kuva = document.getElementById('svg_kuva'); // svg elementti
+    const taustaVari = document.getElementById('taustavari').value; //käyttäjän syöttämä taustaväri
 
     // Nollataan kuva, jos kuva on ollut olemassa
     svg_kuva.innerHTML = '';
@@ -16,6 +16,7 @@ function generoiSVG() {
     svg_kuva.setAttribute('width', sarakkeet_lkm * SIVUMITTA);
     svg_kuva.setAttribute('height', rivit_lkm * SIVUMITTA);
 
+    // Luodaan ruudukko SVG-kuvaan käyttäjän antamien sarakkeiden ja rivien perusteella.
     for (let i = 0; i < rivit_lkm; i++) {
         for (let j = 0; j < sarakkeet_lkm; j++) {
             const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
@@ -43,30 +44,34 @@ function ruutuaKlikattu(event) {
     const silmukkaVari = document.getElementById("silmukkavari").value;
     const kahvaId = event.target.id;
 
-    if (event.button === 0) { // Oikean napin toiminta
+     // Vasemman napin toiminta: vaihtaa ruudun värin käyttäjän antamaan silmukan väriin.
+    if (event.button === 0) { 
         event.target.setAttribute('fill', silmukkaVari);
         console.log(`${kahvaId} muutettu silmukanväriseksi`);
     }
 
-    if (event.button === 2) { // Vasemman napin toiminta
+    // Oikean napin toiminta: vaihtaa ruudun värin taustaväriksi.
+    if (event.button === 2) { 
         event.target.setAttribute('fill', taustaVari);
         console.log(`${kahvaId} muutettu taustaväriseksi`);
     }
 }
 function instantiateSVGs() {
+    // Haetaan kontaineri, johon kopioidut SVG-kuvat lisätään.
     const container = document.getElementById('kopioastia');
     container.innerHTML = '';  // poistetaan aikaisemmat kuvat
 
+// Luodaan kolme kopiota alkuperäisestä SVG-kuvasta ja lisätään ne kontaineriin.
     for (let i = 0; i < 3; i++) {
         const clonedSVG = document.getElementById('svg_kuva').cloneNode(true);
         const rects = clonedSVG.querySelectorAll('rect');
-        /*rects.forEach(rect => { // poistetaan ruudukko taustalta
+        /*rects.forEach(rect => { // poistetaan ruudukon viivat kopioista
             rect.removeAttribute('stroke');
             rect.removeAttribute('stroke-width');
             rect.setAttribute('stroke-width', '0.0');
             rect.setAttribute('stroke-opacity', '0.0');
         });*/
-        container.appendChild(clonedSVG);
+        container.appendChild(clonedSVG); // Lisätään kopio kontaineriin.
     }
 }
 
@@ -77,12 +82,14 @@ const observer = new MutationObserver(() => {
     instantiateSVGs();  // Re-instantiate SVGs when original changes
 });
 
+// Seuraa alkuperäisen SVG-kuvan muutoksia.
 observer.observe(document.getElementById('svg_kuva'), {
     attributes: true,
     childList: true,
     subtree: true
 });
 
+//lataa SVG-kuvan tiedostoksi.
 function downloadSVG(svgElementId, filename) {
     var svgElement = document.getElementById(svgElementId);
     // Lisätään namespace attribuutteja to the SVG elementtiin, 
@@ -110,7 +117,21 @@ function downloadSVG(svgElementId, filename) {
     URL.revokeObjectURL(url);
 }
 
+// Lisätään kuuntelija nappiin, joka lataa SVG-kuvan.
 document.getElementById('downloadButton').addEventListener('click', function () {
     downloadSVG("svg_kuva", "neule.svg");
 });
 
+
+document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Otetaan palauteteksti lomakkeesta
+    const feedbackText = document.getElementById('feedback').value;
+
+    // Näytetään kiitosviesti
+    const messageDiv = document.getElementById('message');
+    messageDiv.textContent = 'Kiitos palautteesta: ' + feedbackText;
+    
+    // Voit lähettää tämän tiedon palvelimelle tässä vaiheessa AJAX:in avulla, jos haluat tallentaa palautteen.
+});
