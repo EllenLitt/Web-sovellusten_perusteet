@@ -86,11 +86,10 @@ h2 {
 }
 
 .column {
-    width: 19%;
+    width: 25%;
     text-align: center;
     display: inline-block;
     vertical-align: top;
-    padding: 20px;
 }
 
 .icon {
