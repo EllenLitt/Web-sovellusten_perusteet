@@ -168,6 +168,18 @@ svg {
     stroke-opacity: 0.4;
 }
 
+textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#message {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+
 footer {
     background-color: rgb(60, 60, 59);
     color: white;
@@ -206,6 +218,7 @@ footer img.ig {
 .social-icons div {
     margin-right: 10px;
 }
+
 
 @media only screen and (max-width: 850px) {
     body img.logoylos {
