@@ -122,16 +122,13 @@ document.getElementById('downloadButton').addEventListener('click', function () 
     downloadSVG("svg_kuva", "neule.svg");
 });
 
-//feedback form
+/*feedback form
 document.getElementById('feedbackForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
     // Get feedback text from the form
-    const feedbackText = document.getElementById('feedback').value
+    const feedbackText = document.getElementById('feedback').value;
 
     // Ohjaa käyttäjä 'thanks.html'-sivulle
     window.location.href = 'thank.html';
-
-    // Tyhjennä lomake
-    document.getElementById('feedbackForm').reset();
-});
+});*/
