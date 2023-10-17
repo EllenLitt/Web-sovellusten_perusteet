@@ -85,6 +85,16 @@ h2 {
     font-family: 'Lato', sans-serif;
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1 1 25%; 
+    margin: 10px;
+}
+
 .column {
     width: 18%;
     text-align: center;
@@ -217,7 +227,7 @@ footer img.ig {
 
     .column {
         font-size: 0.8em;
-        width: 100%;
+        flex: 1 1 100%;
         padding: 0;
     }
 
