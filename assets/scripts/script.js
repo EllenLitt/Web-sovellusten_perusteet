@@ -127,13 +127,11 @@ document.getElementById('feedbackForm').addEventListener('submit', function(even
     event.preventDefault();
 
     // Get feedback text from the form
-    const feedbackText = document.getElementById('feedback').value;
+    const feedbackText = document.getElementById('feedback').value
 
+    // Ohjaa käyttäjä 'thanks.html'-sivulle
+    window.location.href = 'thank.html';
 
-    setTimeout(function() {
-        window.location.href = 'thanks.html';
-    }, 2000);
-
-    // Clear the form
+    // Tyhjennä lomake
     document.getElementById('feedbackForm').reset();
 });
