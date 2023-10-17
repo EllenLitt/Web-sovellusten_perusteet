@@ -129,16 +129,11 @@ document.getElementById('feedbackForm').addEventListener('submit', function(even
     // Get feedback text from the form
     const feedbackText = document.getElementById('feedback').value;
 
-    // Display a thank you message
-    const messageDiv = document.getElementById('message');
-    messageDiv.textContent = 'Thank you for your feedback: ' + feedbackText;
 
-    // Set a timeout to hide the message after 5 seconds (5000 milliseconds)
     setTimeout(function() {
-        messageDiv.textContent = ''; // Empty the message after 5 seconds
-    }, 5000);
+        window.location.href = 'thanks.html';
+    }, 2000);
 
     // Clear the form
     document.getElementById('feedbackForm').reset();
-    
 });
