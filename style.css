@@ -87,7 +87,7 @@ h2 {
 
 .row {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .column {
@@ -230,6 +230,10 @@ footer img.ig {
         font-size: 0.8em;
         flex: 1 1 100%;
         padding: 0;
+    }
+    .row {
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .icon {
