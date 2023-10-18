@@ -122,7 +122,6 @@ document.getElementById('downloadButton').addEventListener('click', function () 
     downloadSVG("svg_kuva", "neule.svg");
 });
 
-
 document.addEventListener('DOMContentLoaded', () => {
     //feedback form
     const form = document.querySelector('form');
@@ -149,7 +148,10 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         feedbackError.style.display = 'none';
+        const message = document.createElement('div');
+        message.textContent = 'Thank you for your feedback';
         message.style.display = 'block';
+        form.appendChild(message);
         setTimeout(() => {
             message.style.display = 'none';
         }, 5000); // hide after 5 seconds
