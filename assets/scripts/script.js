@@ -122,33 +122,36 @@ document.getElementById('downloadButton').addEventListener('click', function () 
     downloadSVG("svg_kuva", "neule.svg");
 });
 
-//feedback form
-const form = document.querySelector('form');
-const message = document.querySelector('#message');
-const feedbackError = document.querySelector('#feedbackError');
-const feedbackCounter = document.querySelector('#feedbackCounter');
-const feedbackTextarea = document.querySelector('#feedback');
 
-feedbackTextarea.addEventListener('input', () => {
-    const count = feedbackTextarea.value.length;
-    feedbackCounter.textContent = `${count}/100`;
-});
-
-form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    if (feedbackTextarea.value.trim() === '') {
-        feedbackError.textContent = 'Please enter your feedback';
-        feedbackError.style.display = 'block';
-        return;
-    }
-    if (feedbackTextarea.value.length > 100) {
-        feedbackError.textContent = 'Feedback cannot exceed 100 characters';
-        feedbackError.style.display = 'block';
-        return;
-    }
-    feedbackError.style.display = 'none';
-    message.style.display = 'block';
-    setTimeout(() => {
-        message.style.display = 'none';
-    }, 5000); // hide after 5 seconds
-});
+document.addEventListener('DOMContentLoaded', () => {
+    //feedback form
+    const form = document.querySelector('form');
+    const message = document.querySelector('#message');
+    const feedbackError = document.querySelector('#feedbackError');
+    const feedbackCounter = document.querySelector('#feedbackCounter');
+    const feedbackTextarea = document.querySelector('#feedback');
+  
+    feedbackTextarea.addEventListener('input', () => {
+        const count = feedbackTextarea.value.length;
+        feedbackCounter.textContent = `${count}/100`;
+    });
+  
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        if (feedbackTextarea.value.trim() === '') {
+            feedbackError.textContent = 'Please enter your feedback';
+            feedbackError.style.display = 'block';
+            return;
+        }
+        if (feedbackTextarea.value.length > 100) {
+            feedbackError.textContent = 'Feedback cannot exceed 100 characters';
+            feedbackError.style.display = 'block';
+            return;
+        }
+        feedbackError.style.display = 'none';
+        message.style.display = 'block';
+        setTimeout(() => {
+            message.style.display = 'none';
+        }, 5000); // hide after 5 seconds
+    });
+  });
