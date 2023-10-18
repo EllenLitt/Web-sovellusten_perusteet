@@ -123,18 +123,18 @@ document.getElementById('downloadButton').addEventListener('click', function () 
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    //feedback form
+    // feedback form logic goes here
     const form = document.querySelector('form');
     const message = document.querySelector('#message');
     const feedbackError = document.querySelector('#feedbackError');
     const feedbackCounter = document.querySelector('#feedbackCounter');
     const feedbackTextarea = document.querySelector('#feedback');
-  
+
     feedbackTextarea.addEventListener('input', () => {
         const count = feedbackTextarea.value.length;
         feedbackCounter.textContent = `${count}/100`;
     });
-  
+
     form.addEventListener('submit', (event) => {
         event.preventDefault();
         if (feedbackTextarea.value.trim() === '') {
@@ -148,12 +148,10 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         feedbackError.style.display = 'none';
-        const message = document.createElement('div');
         message.textContent = 'Thank you for your feedback';
         message.style.display = 'block';
-        form.appendChild(message);
         setTimeout(() => {
             message.style.display = 'none';
         }, 5000); // hide after 5 seconds
     });
-  });
+});
