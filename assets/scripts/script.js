@@ -44,14 +44,14 @@ function ruutuaKlikattu(event) {
     const silmukkaVari = document.getElementById("silmukkavari").value;
     const kahvaId = event.target.id;
 
-     // Vasemman napin toiminta: vaihtaa ruudun värin käyttäjän antamaan silmukan väriin.
-    if (event.button === 0) { 
+    // Vasemman napin toiminta: vaihtaa ruudun värin käyttäjän antamaan silmukan väriin.
+    if (event.button === 0) {
         event.target.setAttribute('fill', silmukkaVari);
         console.log(`${kahvaId} muutettu silmukanväriseksi`);
     }
 
     // Oikean napin toiminta: vaihtaa ruudun värin taustaväriksi.
-    if (event.button === 2) { 
+    if (event.button === 2) {
         event.target.setAttribute('fill', taustaVari);
         console.log(`${kahvaId} muutettu taustaväriseksi`);
     }
@@ -61,7 +61,7 @@ function instantiateSVGs() {
     const container = document.getElementById('kopioastia');
     container.innerHTML = '';  // poistetaan aikaisemmat kuvat
 
-// Luodaan kolme kopiota alkuperäisestä SVG-kuvasta ja lisätään ne kontaineriin.
+    // Luodaan kolme kopiota alkuperäisestä SVG-kuvasta ja lisätään ne kontaineriin.
     for (let i = 0; i < 3; i++) {
         const clonedSVG = document.getElementById('svg_kuva').cloneNode(true);
         const rects = clonedSVG.querySelectorAll('rect');
@@ -123,3 +123,32 @@ document.getElementById('downloadButton').addEventListener('click', function () 
 });
 
 //feedback form
+const form = document.querySelector('form');
+const message = document.querySelector('#message');
+const feedbackError = document.querySelector('#feedbackError');
+const feedbackCounter = document.querySelector('#feedbackCounter');
+const feedbackTextarea = document.querySelector('#feedback');
+
+feedbackTextarea.addEventListener('input', () => {
+    const count = feedbackTextarea.value.length;
+    feedbackCounter.textContent = `${count}/100`;
+});
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (feedbackTextarea.value.trim() === '') {
+        feedbackError.textContent = 'Please enter your feedback';
+        feedbackError.style.display = 'block';
+        return;
+    }
+    if (feedbackTextarea.value.length > 100) {
+        feedbackError.textContent = 'Feedback cannot exceed 100 characters';
+        feedbackError.style.display = 'block';
+        return;
+    }
+    feedbackError.style.display = 'none';
+    message.style.display = 'block';
+    setTimeout(() => {
+        message.style.display = 'none';
+    }, 5000); // hide after 5 seconds
+});

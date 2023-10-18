@@ -29,13 +29,15 @@
 
     <main class="contact">
         <div class="contact-container">
-            <form id="feedbackForm">
-                <label for="feedback">Your feedback:</label>
-                <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br>
-                <a href="thank.html">
-                    <button type="submit">Submit</button>
-                </a>
-            </form>
+            <form>
+                <label for="feedback">Feedback:</label><br>
+                <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea><br>
+                <div id="feedbackError" style="display:none; color:red;">Please enter your feedback</div>
+                <div id="feedbackCounter">0/100</div>
+                <button type="submit">Submit</button>
+              </form>
+            
+              <div id="message">Thank you for the feedback</div>
             <div class="contact-info">
                 <p>Or reach us via <a href="mailto:t2liel00@students.oamk.fi">email</a></p>
             </div>
