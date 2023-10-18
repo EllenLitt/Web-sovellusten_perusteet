@@ -210,7 +210,7 @@ footer img.ig {
 
 @media only screen and (max-width: 850px) {
     body img.logoylos {
-        width: 130px;
+        width: 120px;
         height: auto;
     }
 
@@ -219,11 +219,12 @@ footer img.ig {
     }
 
     h1 {
-        font-size: 1.25em;
+        font-size: 1.2em;
+        text-align: end;
     }
 
     h2 {
-        font-size: 1.1em;
+        font-size: 1em;
     }
 
     .column {
