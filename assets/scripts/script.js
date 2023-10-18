@@ -92,7 +92,7 @@ observer.observe(document.getElementById('svg_kuva'), {
 //lataa SVG-kuvan tiedostoksi.
 function downloadSVG(svgElementId, filename) {
     var svgElement = document.getElementById(svgElementId);
-    // Lisätään namespace attribuutteja to the SVG elementtiin, 
+    // Lisätään namespace attribuutteja SVG elementtiin, 
     // jotta browserit pystyy näyttämään svg tiedoston suoraan latauksen jälkeen
     svgElement.setAttribute("xmlns", "http://www.w3.org/2000/svg");
     svgElement.setAttribute("xmlns:xlink", "http://www.w3.org/1999/xlink");
@@ -122,13 +122,4 @@ document.getElementById('downloadButton').addEventListener('click', function () 
     downloadSVG("svg_kuva", "neule.svg");
 });
 
-/*feedback form
-document.getElementById('feedbackForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    // Get feedback text from the form
-    const feedbackText = document.getElementById('feedback').value;
-
-    // Ohjaa käyttäjä 'thanks.html'-sivulle
-    window.location.href = 'thank.html';
-});*/
+//feedback form

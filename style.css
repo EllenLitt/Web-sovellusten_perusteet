@@ -76,7 +76,7 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #616651;
-    text-align: end;
+    text-align: center;
 }
 
 h2 {
@@ -91,17 +91,15 @@ h2 {
 }
 
 .column {
-    flex: 1 1 25%;
+    flex: 1 1 15%;
     margin: 10px;
-}
-
-.column {
-    width: 18%;
     text-align: center;
     display: inline-block;
     vertical-align: top;
     padding: 20px;
+    width: 100%;
 }
+
 
 .icon {
     width: 50px;
@@ -128,19 +126,7 @@ button {
     float: right;
 }
 
-.generator {
-    color: rgb(0, 0, 0);
-}
-
 .content {
-    padding: 3%;
-    font-family: 'Lato', sans-serif;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-.contact {
     padding: 3%;
     font-family: 'Lato', sans-serif;
     font-weight: bold;
@@ -152,6 +138,7 @@ button {
     flex: 1;
     padding: 10px;
     border: 3px solid rgb(177, 177, 177);
+    border-bottom: 0px;
 }
 
 .column2 {
@@ -160,7 +147,6 @@ button {
     border: 3px solid rgb(177, 177, 177);
 }
 
-
 svg {
     width: auto;
     stroke: white;
@@ -168,16 +154,18 @@ svg {
     stroke-opacity: 0.4;
 }
 
+.contact {
+    padding: 3%;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
 textarea {
     width: 100%;
     margin-bottom: 10px;
 }
-
-#message {
-    margin-top: 20px;
-    font-weight: bold;
-}
-
 
 
 footer {
