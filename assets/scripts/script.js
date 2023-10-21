@@ -134,24 +134,43 @@ document.addEventListener('DOMContentLoaded', () => {
         const count = feedbackTextarea.value.length;
         feedbackCounter.textContent = `${count}/100`;
     });
-
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-        if (feedbackTextarea.value.trim() === '') {
-            feedbackError.textContent = 'Please enter your feedback';
-            feedbackError.style.display = 'block';
-            return;
-        }
-        if (feedbackTextarea.value.length > 100) {
-            feedbackError.textContent = 'Feedback cannot exceed 100 characters';
-            feedbackError.style.display = 'block';
-            return;
-        }
-        feedbackError.style.display = 'none';
-        message.textContent = 'Thank you for your feedback';
-        message.style.display = 'block';
-        setTimeout(() => {
-            message.style.display = 'none';
-        }, 5000); // hide after 5 seconds
-    });
+    /*
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            if (feedbackTextarea.value.trim() === '') {
+                feedbackError.textContent = 'Please enter your feedback';
+                feedbackError.style.display = 'block';
+                return;
+            }
+            if (feedbackTextarea.value.length > 100) {
+                feedbackError.textContent = 'Feedback cannot exceed 100 characters';
+                feedbackError.style.display = 'block';
+                return;
+            }
+            feedbackError.style.display = 'none';
+            message.textContent = 'Thank you for your feedback';
+            message.style.display = 'block';
+            setTimeout(() => {
+                message.style.display = 'none';
+            }, 5000); // hide after 5 seconds
+    
+    
+            html:
+                        <form>
+                    <label for="feedback">Feedback:</label><br>
+                    <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea><br>
+                    <div id="feedbackError" style="display:none; color:red;">Please enter your feedback</div>
+                    <div id="feedbackCounter">0/100</div>
+                    <button type="submit">Submit</button>
+                </form>
+                <div id="message"></div>
+    
+            css:
+            form {
+        width: auto;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+    }
+    
+        });*/
 });
